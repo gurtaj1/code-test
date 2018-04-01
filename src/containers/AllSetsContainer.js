@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Set from '../components/Set'
+import AllSets from '../components/AllSets'
 
-class SetCon extends React.Component {
+class AllSetsCon extends React.Component {
     render () {
         return (
             <div>
