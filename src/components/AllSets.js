@@ -10,6 +10,7 @@ class AllSets extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="row setsHeader">
+                    All Sets
                 </div>
                 <div className="row setsList">
                     {this.createSetsList()}
