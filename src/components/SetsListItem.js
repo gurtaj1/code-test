@@ -5,7 +5,8 @@ class SetsListItem extends React.Component {
         return (
             <div className="col-12">
                 <p id="setTitle">{this.props.title}</p>
-                <p id="filmCount">{this.props.filmCount}</p>
+                <p id="setQuote">{this.props.quote}</p>
+                <img src={this.props.image} alt="set-thumb" />
             </div>
         )
     }

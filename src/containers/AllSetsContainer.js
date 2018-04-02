@@ -26,10 +26,9 @@ class AllSetsCon extends React.Component {
 
 function mapStateToProps(state) {
     let sets = state.sets;
-    let setsCopy = sets;
 
     return {
-        sets: setsCopy
+        sets: sets
     }
 }
 
