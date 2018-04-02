@@ -13,7 +13,6 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import reducers from './reducers/reducers'
 import './index.css';
 import Routes from './Routes';
-import AllSets from './components/AllSets';
 
 const history = createHistory({basename: '/'});
 const routeHistoryMiddleware = routerMiddleware(history);
