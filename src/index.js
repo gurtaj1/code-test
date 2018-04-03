@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-import {/*ConnectedRouter,*/ routerMiddleware} from 'react-router-redux';
-import {BrowserRouter} from 'react-router-dom';
+import {ConnectedRouter, routerMiddleware} from 'react-router-redux';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 
@@ -14,14 +13,14 @@ import reducers from './reducers/reducers'
 import './index.css';
 import Routes from './Routes';
 
-const history = createHistory({basename: '/'});
+const history = createHistory();
 const routeHistoryMiddleware = routerMiddleware(history);
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(routeHistoryMiddleware, thunk)));
 
 ReactDOM.render(<Provider store={store}>
-                    <BrowserRouter history={history}>
+                    <ConnectedRouter history={history}>
                         <Routes />
-                    </BrowserRouter>
+                    </ConnectedRouter>
                 </Provider>
 , document.getElementById('root'));

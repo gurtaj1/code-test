@@ -7,6 +7,9 @@ import getSets from '../actions/getSets';
 import AllSets from '../components/AllSets'
 
 class AllSetsCon extends React.Component {
+    componentWillMount() {
+        this.props.getSets()
+    }
     createAllSets () {
         return (
             <AllSets 

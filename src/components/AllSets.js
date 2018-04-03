@@ -6,13 +6,13 @@ class AllSets extends React.Component {
     createSetsList () {
         if(!this.props.sets.error){
             return this.props.sets.data.map(set => {
-                console.log(set.image)
                 return (
                     <SetsListItem
                         key={set.uid}
                         title={set.title}
                         quote={set.quoter}
                         image={set.image}
+                        link={"/set/"+set.uid}
                     />
                 )
             })
@@ -23,9 +23,6 @@ class AllSets extends React.Component {
                 </div>
             )
         }
-    }
-    componentDidMount() {
-        this.props.getSets()
     }
     render () {
         return (
