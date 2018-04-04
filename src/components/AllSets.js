@@ -12,7 +12,7 @@ class AllSets extends React.Component {
                         title={set.title}
                         quote={set.quoter}
                         image={set.image}
-                        link={"/set/"+set.uid}
+                        link={"/"+set.uid}
                     />
                 )
             })
@@ -26,12 +26,18 @@ class AllSets extends React.Component {
     }
     render () {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid text-center">
                 <div className="row setsHeader">
-                    All Sets
+                    <div className="col-12">
+                        <h1>All Sets</h1>
+                    </div>
                 </div>
                 <div className="row setsList">
-                    {this.createSetsList()}
+                    <div className="col-12">
+                        <div className="row">
+                            {this.createSetsList()}
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -3,6 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 
 import {AllSetsContainer} from './containers/AllSetsContainer';
 import {SetContainer} from './containers/SetContainer';
+import {EpisodeContainer} from './containers/EpisodeContainer';
 
 class Routes extends React.Component {
   render () {
@@ -10,7 +11,8 @@ class Routes extends React.Component {
       <div>
         <Switch>
           <Route exact path="/" component={AllSetsContainer} />
-          <Route path="/set/:uid" component={SetContainer} />
+          <Route exact path="/:setuid" component={SetContainer} />
+          <Route path="/:setuid/:episodeuid" component={EpisodeContainer} />
         </Switch>
       </div>
     )

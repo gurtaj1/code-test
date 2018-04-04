@@ -10,6 +10,7 @@ class Set extends React.Component {
                     <EpisodesListItem
                         key={episode.uid}
                         title={episode.title}
+                        link={"/" + this.props.setuid + "/" + episode.uid}
                     />
                 )
             })
@@ -23,14 +24,26 @@ class Set extends React.Component {
     }
     render () {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid text-center">
                 <div className="row setHeader">
-                    <p id="setTitle">{this.props.title}</p>
-                    <p id="setQuote">{this.props.quote}</p>
-                    <img src={this.props.image} alt="set-screen" />
-                    <p id="setBody">{this.props.body}</p>
+                    <div className="col-12">
+                        <h1 id="setTitle">{this.props.title}</h1>
+                    </div>
+                    <div className="col-12">
+                        <p id="setQuote">{this.props.quote}</p>
+                    </div>
                 </div>
-                <div className="row episodesList">
+                <div className="row justify-content-center">
+                    <div className="col-md-8 col-12">
+                        <img id="setImage" src={this.props.image} alt="set-screen" />
+                    </div>
+                </div>
+                <div className="row justify-content-center setBodyRow">
+                    <div className="col-md-8 col-12">
+                        <p id="setBody">{this.props.body}</p>
+                    </div>
+                </div>
+                <div className="row justify-content-center episodesList">
                     {this.createEpisodesList()}
                 </div>
             </div>

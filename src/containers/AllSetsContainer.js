@@ -8,7 +8,7 @@ import AllSets from '../components/AllSets'
 
 class AllSetsCon extends React.Component {
     componentWillMount() {
-        this.props.getSets()
+        this.props.getSets();
     }
     createAllSets () {
         return (

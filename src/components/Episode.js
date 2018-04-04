@@ -9,8 +9,8 @@ class Episode extends React.Component {
                     <p id="episodeReleaseDate">{this.props.releaseDate}</p>
                 </div>
                 <div className="row videoPlayer">
-                    <image src={this.props.image} alt="episode screen" />
-                    <p>Subtitles: {this.props.subtitles}</p>
+                    <p>Click image to play:</p>
+                    <img src={this.props.image} alt="episode-screen" />
                 </div>
             </div>
         )

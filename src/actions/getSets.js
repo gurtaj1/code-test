@@ -17,24 +17,37 @@ export default function getSets(){
                 } else {
                     dataArr[i].image = "http://www.contactyellowpages.com/images/no_image.jpg";
                 }
-                dataArr[i].episodes = [];
+                dataArr[i].episodes = []; // create array within data array for storing episode data
                 if (response.data.objects[i].items.length>0) { //if the set has items (equivalent to episodes and dividers)
                     for (let j=0; j<response.data.objects[i].items.length; j++) {
-                        if (response.data.objects[i].items[j].content_type !== "divider") { //for each item which is an episode
+                        if (response.data.objects[i].items[j].content_type === "episode") { //for each item which is an episode
                             axios.get(baseURL+response.data.objects[i].items[j].content_url) //get the episode data
                             .then(response2 => {
-                                dataArr[i].episodes.push(response2.data) //add the episode data to the data array
-                                dispatch({
-                                    type: "GET_SETS",
-                                    data: dataArr
-                                })
+                                if (response2.data.image_urls.length>0){ //if there are any image api urls provoded
+                                    axios.get(baseURL+response2.data.image_urls[0]) //make a call to the image api url
+                                    .then(response3 => {
+                                        response2.data.image = response3.data.url; //add the direct image url to the episode data object
+                                        dataArr[i].episodes.push(response2.data); //add the episode data to the data array
+                                        dispatch({
+                                            type: "GET_SETS",
+                                            data: dataArr
+                                        })
+                                    })
+                                } else {
+                                    response2.data.image = "http://www.contactyellowpages.com/images/no_image.jpg";
+                                    dataArr[i].episodes.push(response2.data);
+                                    dispatch({
+                                        type: "GET_SETS",
+                                        data: dataArr
+                                    })
+                                }
                             })
                         }
                     }
                 }
             }
         })
-        .catch((error) => {
+        .catch(error => {
             dispatch({
                 type: "SETS_ERROR",
                 payload: error
@@ -42,3 +55,5 @@ export default function getSets(){
         })
     }
 }
+
+

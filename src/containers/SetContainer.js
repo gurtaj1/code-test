@@ -8,7 +8,7 @@ import Set from '../components/Set'
 
 class SetCon extends React.Component {
     componentWillMount() {
-        this.props.getSets()
+        this.props.getSets();
     }
     createSet () {
         return this.props.activeSet.map(set => {
@@ -20,6 +20,7 @@ class SetCon extends React.Component {
                     image={set.image}
                     body={set.body}
                     episodes={set.episodes}
+                    setuid={this.props.match.params.setuid}
                 />
             )
         })
@@ -36,7 +37,7 @@ class SetCon extends React.Component {
 function mapStateToProps(state, ownProps) {
     let sets = state.sets.data;
     let activeSet = sets.filter(
-        set => set.uid === ownProps.match.params.uid
+        set => set.uid === ownProps.match.params.setuid
     )
 
     return {
