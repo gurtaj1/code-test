@@ -4,8 +4,8 @@ import SetsListItem from './SetsListItem';
 
 class AllSets extends React.Component {
     createSetsList () {
-        if(!this.props.sets.error){
-            return this.props.sets.data.map(set => {
+        if(!this.props.data.error){
+            return this.props.data.sets.map(set => {
                 return (
                     <SetsListItem
                         key={set.uid}
@@ -19,7 +19,7 @@ class AllSets extends React.Component {
         } else {
             return (
                 <div>
-                    Oops! Looks like there was an error in retrieving the requested information. Please try again.
+                    Oops! Looks like there was an error in retrieving the requested information. Please refresh the page to try again.
                 </div>
             )
         }

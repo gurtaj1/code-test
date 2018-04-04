@@ -1,31 +1,38 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-
-import getSets from '../actions/getSets';
 
 import Episode from '../components/Episode'
 
 class EpisodeCon extends React.Component {
     createEpisode() {
-        return this.props.activeSet.map(set => {
-            return set.episodes.map(episode => {
-                if (episode.uid === this.props.match.params.episodeuid) {
-                    return (
-                        <Episode
-                            key={episode.uid}
-                            title={episode.title}
-                            image={episode.image}
-                        />
-                    )
-                } else {
-                    return (
-                        ""
-                    )
-                }
+        if (!this.props.data.error) {
+            let activeSet = this.props.data.sets.filter(
+                set => set.uid === this.props.match.params.setuid
+            )
+            return activeSet.map(set => {
+                return set.episodes.map(episode => {
+                    if (episode.uid === this.props.match.params.episodeuid) {
+                        return (
+                            <Episode
+                                key={episode.uid}
+                                title={episode.title}
+                                image={episode.image}
+                            />
+                        )
+                    } else {
+                        return (
+                            ""
+                        )
+                    }
+                })
             })
-
-        })
+        } else {
+            return (
+                <div>
+                    Oops! Looks like there was an error in retrieving the requested information. Please refresh the page to try again.
+                </div>
+            )
+        }
     }
     render () {
         return (
@@ -37,18 +44,11 @@ class EpisodeCon extends React.Component {
 }
 
 function mapStateToProps(state, ownProps) {
-    let sets = state.sets.data;
-    let activeSet = sets.filter(
-        set => set.uid === ownProps.match.params.setuid
-    )
+    let data = state.data;
 
     return {
-        activeSet: activeSet
+        data: data
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({getSets: getSets}, dispatch);
-}
-
-export const EpisodeContainer = connect(mapStateToProps, mapDispatchToProps)(EpisodeCon);
+export const EpisodeContainer = connect(mapStateToProps)(EpisodeCon);

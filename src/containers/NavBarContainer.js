@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import getSets from '../actions/getSets';
+import getData from '../actions/getData';
 
 class NavBarCon extends React.Component {
     componentWillMount() {
-        this.props.getSets();
+        this.props.getData();
     }
     render() {
         return (
@@ -21,7 +21,7 @@ class NavBarCon extends React.Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({getSets: getSets}, dispatch);
+    return bindActionCreators({getData: getData}, dispatch);
 }
 
 export const NavBarContainer = connect(null, mapDispatchToProps)(NavBarCon);

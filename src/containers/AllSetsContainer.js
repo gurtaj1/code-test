@@ -1,8 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-
-import getSets from '../actions/getSets';
 
 import AllSets from '../components/AllSets'
 
@@ -10,8 +7,8 @@ class AllSetsCon extends React.Component {
     createAllSets () {
         return (
             <AllSets 
-                sets={this.props.sets}
-                getSets={() => this.props.getSets()}
+                data={this.props.data}
+                getData={() => this.props.getData()}
             />
         )
     }
@@ -25,15 +22,11 @@ class AllSetsCon extends React.Component {
 }
 
 function mapStateToProps(state) {
-    let sets = state.sets;
+    let data = state.data;
 
     return {
-        sets: sets
+        data: data
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({getSets: getSets}, dispatch);
-}
-
-export const AllSetsContainer = connect(mapStateToProps, mapDispatchToProps)(AllSetsCon);
+export const AllSetsContainer = connect(mapStateToProps)(AllSetsCon);

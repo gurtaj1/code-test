@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseURL = "http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000";
 
-export default function getSets(){
+export default function getData(){
     return (dispatch) => {
         return axios.get(baseURL+"/api/sets/")  //get sets
         .then(response => {
@@ -13,7 +13,7 @@ export default function getSets(){
             return response;
         })
         .then(response => {
-            response.data.objects.map(object => {
+            response.data.objects.forEach(object => {
                 if (object.image_urls.length>0) {
                     return axios.get(baseURL+object.image_urls[0])  //get first image for each set which has image(s)
                     .then(res => {
@@ -33,9 +33,9 @@ export default function getSets(){
             return response;
         })
         .then(response => {
-            response.data.objects.map(object => {
+            response.data.objects.forEach(object => {
                 if (object.items.length>0) {
-                    object.items.map(item => {
+                    object.items.forEach(item => {
                         if (item.content_type === "episode") {
                             axios.get(baseURL+item.content_url)  //get each episode-item for each set which has items in it
                             .then(res => {

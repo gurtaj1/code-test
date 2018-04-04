@@ -1,26 +1,34 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-
-import getSets from '../actions/getSets';
 
 import Set from '../components/Set'
 
 class SetCon extends React.Component {
     createSet () {
-        return this.props.activeSet.map(set => {
-            return (
-                <Set
-                    key={set.uid}
-                    title={set.title}
-                    quote={set.quoter}
-                    image={set.image}
-                    body={set.body}
-                    episodes={set.episodes}
-                    setuid={this.props.match.params.setuid}
-                />
+        if (!this.props.data.error) {
+            let activeSet = this.props.data.sets.filter(
+                set => set.uid === this.props.match.params.setuid
             )
-        })
+            return activeSet.map(set => {
+                return (
+                    <Set
+                        key={set.uid}
+                        title={set.title}
+                        quote={set.quoter}
+                        image={set.image}
+                        body={set.body}
+                        episodes={set.episodes}
+                        setuid={this.props.match.params.setuid}
+                    />
+                )
+            })
+        } else {
+            return (
+                <div>
+                    Oops! Looks like there was an error in retrieving the requested information. Please refresh the page to try again.
+                </div>
+            )
+        }
     }
     render () {
         return (
@@ -32,18 +40,11 @@ class SetCon extends React.Component {
 }
 
 function mapStateToProps(state, ownProps) {
-    let sets = state.sets.data;
-    let activeSet = sets.filter(
-        set => set.uid === ownProps.match.params.setuid
-    )
-
+    let data = state.data;
+    
     return {
-        activeSet: activeSet
+        data: data
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({getSets: getSets}, dispatch);
-}
-
-export const SetContainer = connect(mapStateToProps, mapDispatchToProps)(SetCon);
+export const SetContainer = connect(mapStateToProps)(SetCon);

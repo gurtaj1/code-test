@@ -1,14 +1,10 @@
 import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux';
 
-import sets from './sets';
-import set from './set';
-import episode from './episode';
+import data from './data';
 
 const reducers = combineReducers({
-    sets: sets,
-    set: set,
-    episode: episode,
+    data: data,
 
     router: routerReducer
 })
