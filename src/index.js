@@ -11,7 +11,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 
 import reducers from './reducers/reducers'
 import './index.css';
-import Routes from './Routes';
+import App from './App';
 
 const history = createHistory();
 const routeHistoryMiddleware = routerMiddleware(history);
@@ -20,7 +20,7 @@ const store = createStore(reducers, composeWithDevTools(applyMiddleware(routeHis
 
 ReactDOM.render(<Provider store={store}>
                     <ConnectedRouter history={history}>
-                        <Routes />
+                        <App />
                     </ConnectedRouter>
                 </Provider>
 , document.getElementById('root'));

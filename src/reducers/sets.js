@@ -52,7 +52,6 @@ function addEpisode(state=initialState, episode) {
 }
 
 function addEpisodeImage(state=initialState, episodeImage) {
-    console.log(episodeImage)
     let newStateData = state.data.slice(0);
     for (let i=0; i<newStateData.length; i++) {
         if(newStateData[i].episodes.length>0) {

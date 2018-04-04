@@ -7,9 +7,6 @@ import getSets from '../actions/getSets';
 import Episode from '../components/Episode'
 
 class EpisodeCon extends React.Component {
-    componentWillMount() {
-        this.props.getSets();
-    }
     createEpisode() {
         return this.props.activeSet.map(set => {
             return set.episodes.map(episode => {

@@ -34,7 +34,7 @@ class Set extends React.Component {
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-md-8 col-12">
+                    <div className="col-md-6 col-12">
                         <img id="setImage" src={this.props.image} alt="set-screen" />
                     </div>
                 </div>

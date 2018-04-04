@@ -7,9 +7,6 @@ import getSets from '../actions/getSets';
 import Set from '../components/Set'
 
 class SetCon extends React.Component {
-    componentWillMount() {
-        this.props.getSets();
-    }
     createSet () {
         return this.props.activeSet.map(set => {
             return (
