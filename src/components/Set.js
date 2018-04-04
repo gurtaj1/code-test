@@ -44,6 +44,9 @@ class Set extends React.Component {
                     </div>
                 </div>
                 <div className="row justify-content-center episodesList">
+                    <div className="col-12">
+                        <h2>Episodes</h2>
+                    </div>
                     {this.createEpisodesList()}
                 </div>
             </div>

@@ -93,7 +93,7 @@ export default function getSets(){
 //                 dataArr[i].image = response1.data.url; //add that image to the data array
 //             })
 //         } else {
-//             dataArr[i].image = "http://www.contactyellowpages.com/images/no_image.jpg";
+//             dataArr[i].image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
 //         }
 //         dataArr[i].episodes = []; // create array within data array for storing episode data
 //         if (response.data.objects[i].items.length>0) { //if the set has items (equivalent to episodes and dividers)
@@ -112,7 +112,7 @@ export default function getSets(){
 //                                 })
 //                             })
 //                         } else {
-//                             response2.data.image = "http://www.contactyellowpages.com/images/no_image.jpg";
+//                             response2.data.image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
 //                             dataArr[i].episodes.push(response2.data);
 //                             dispatch({
 //                                 type: "GET_SETS",

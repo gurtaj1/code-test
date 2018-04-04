@@ -8,7 +8,7 @@ function addData(state=initialState, data) {
     newStateData = data;
     for (let i=0; i<newStateData.length; i++) {
         newStateData[i].episodes = [];
-        newStateData[i].image = "http://www.contactyellowpages.com/images/no_image.jpg";
+        newStateData[i].image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
     }
     return {
         ...state,
@@ -59,7 +59,7 @@ function addEpisodeImage(state=initialState, episodeImage) {
                 if(newStateData[i].episodes[j].image_urls[0] === episodeImage.self) {
                     newStateData[i].episodes[j].image = episodeImage.url;
                 } else {
-                    newStateData[i].episodes[j].image = "http://www.contactyellowpages.com/images/no_image.jpg";
+                    newStateData[i].episodes[j].image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
                 }
             }
         }
