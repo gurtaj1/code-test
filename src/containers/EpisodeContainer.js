@@ -12,11 +12,17 @@ class EpisodeCon extends React.Component {
             return activeSet.map(set => {
                 return set.episodes.map(episode => {
                     if (episode.uid === this.props.match.params.episodeuid) {
+                        function getUKDate() {
+                            let usaDate = episode.ends_on.slice(0, 10);
+                            let usaDateArr = usaDate.split("-");
+                            return usaDateArr[2] + "/" + usaDateArr[1] + "/" + usaDateArr[0];
+                        }
                         return (
                             <Episode
                                 key={episode.uid}
                                 title={episode.title}
                                 image={episode.image}
+                                date={getUKDate()}
                             />
                         )
                     } else {
