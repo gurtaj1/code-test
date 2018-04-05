@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Important Notes
 
-Since browsers restrict cross-origin HTTP requests initiated from within scripts (for security reasons), it is recommended that this app is viewed in Google Chrome with the 'Allow-Control-Allow-Origin' extension installed.
+Since browsers restrict cross-origin HTTP requests initiated from within scripts (for security reasons), it is recommended that this app is viewed in Google Chrome with the 'Allow-Control-Allow-Origin' extension installed. Cross-origin resource sharing can then be enabled within the extension settings.
 
 ## How to Run
 
@@ -60,8 +60,8 @@ Instructions for running this app can be found in [Available Scripts](#available
 If I had allowed myself more time on this project, I would have looked into a way in which I could dispatch one action, upon the response of my last api call. Since this is my first time making api calls using Reactjs, I am not yet fully aware of what I can and can't do.
 
 I have also not, as of yet, had any experience in writing tests. If I had I would have certainly applied unit testing to my project as I understand the importance of test driven development.  
-All of my debugging was done by observing any errors found in the browser console whenever attempting to run the code. This was always followed by examination of the relevant peices of code.
-Some packages that I beleive would have helped me with my testing and debugging are Jest and ESLint.
+All of my debugging was done by observing any errors found in the browser console whenever attempting to run the code. This was always followed by examination of the relevant pieces of code.
+Some packages that I believe would have helped me with my testing and debugging are Jest and ESLint.
 
 I understand the benefits of writing code functionally as opposed to procedurally. I adhered to writing my code functionally, as best as I could.
 
