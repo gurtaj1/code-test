@@ -3,8 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Table of Contents
 
 - [Important Notes](#important-notes)
-- [Sending Feedback](#sending-feedback)
-- [How to Run](#how-to-run)
+- [Getting Started](#getting-started)
 - [Further Notes](#further-notes)
   - [Extra Work](#extra-work)
   - [Available API Data](#navailable-api-data)
@@ -18,40 +17,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Since browsers restrict cross-origin HTTP requests initiated from within scripts (for security reasons), it is recommended that this app is viewed in Google Chrome with the 'Allow-Control-Allow-Origin' extension installed. Cross-origin resource sharing can then be enabled within the extension settings.
 
-## How to Run
+## Getting Started
 
-Since this project was created using create-react-app you can get all dependencies by following the 'Creating an App' [guidlines](https://github.com/facebook/create-react-app/blob/master/README.md#creating-an-app).  
-
-You can then delete all the files and folders in your directory except the node_modules folder and the files within it.
-
-You may then make a pull request of this repo and copy the files to the directory you have the node_modules folder located in.
-
-The devDependencies (also found in the package.json file of this repo) are as follows:
-
-- axios  
- install: npm install --save-dev axios@^0.18.0
-- history  
- install: npm install --save-dev history@^4.7.2
-- react  
- install: npm install --save-dev react@^16.3.0
-- react-dom 
- install: npm install --save-dev react-dom@^16.3.0
-- react-redux 
- install: npm install --save-dev react-redux@^5.0.7
-- react-router  
- install: npm install --save-dev react-router@^4.2.0
-- react-router-dom  
- install: npm install --save-dev react-router-dom@^4.2.2
-- react-router-redux  
- install: npm install --save-dev react-router-redux@^5.0.0-alpha.9
-- redux  
- install: npm install --save-dev redux@^3.7.2
-- redux-devtools-extension  
- install: npm install --save-dev redux-devtools-extension@^2.13.2
-- redux-thunk  
- install: npm install --save-dev redux-thunk@^2.2.0
-
-Instructions for running this app can be found in [Available Scripts](#available-scripts) below.  
+$ git clone https://github.com/gurtaj1/code-test.git
+$ cd code-test
+$ npm install
+$ npm start
 
 ## Further Notes  
 
