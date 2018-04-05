@@ -53,6 +53,25 @@ The devDependencies (also found in the package.json file of this repo) are as fo
 
 Instructions for running this app can be found in [Available Scripts](#available-scripts) below.  
 
+## Further Notes  
+
+### Extra Work  
+
+If I had allowed myself more time on this project, I would have looked into a way in which I could dispatch one action, upon the response of my last api call. Since this is my first time making api calls using Reactjs, I am not yet fully aware of what I can and can't do.
+
+I have also not, as of yet, had any experience in writing tests. If I had I would have certainly applied unit testing to my project as I understand the importance of test driven development.  
+All of my debugging was done by observing any errors found in the browser console whenever attempting to run the code. This was always followed by examination of the relevant peices of code.
+Some packages that I beleive would have helped me with my testing and debugging are Jest and ESLint.
+
+I understand the benefits of writing code functionally as opposed to procedurally. I adhered to writing my code functionally, as best as I could.
+
+### Available API Data  
+
+At the time of working on this project there were:
+- Images for 14 out of the 20 sets.  
+- Episodes for one of the sets.  
+- An Image for one of the episodes.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -79,22 +98,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
-
-## Further Notes  
-
-### Extra Work  
-
-If I had allowed myself more time on this project, I would have looked into a way in which I could dispatch one action, upon the response of my last api call. Since this is my first time making api calls using Reactjs, I am not yet fully aware of what I can and can't do.
-
-I have also not, as of yet, had any experience in writing tests. If I had I would have certainly applied unit testing to my project as I understand the importance of test driven development.  
-All of my debugging was done by observing any errors found in the browser console whenever attempting to run the code. This was always followed by examination of the relevant peices of code.
-Some packages that I beleive would have helped me with my testing and debugging are Jest and ESLint.
-
-I understand the benefits of writing code functionally as opposed to procedurally. I adhered to writing my code functionally, as best as I could.
-
-### Available API Data  
-
-At the time of working on this project there were:
-- Images for 14 out of the 20 sets.  
-- Episodes for one of the sets.  
-- An Image for one of the episodes.
