@@ -20,7 +20,7 @@ Since browsers restrict cross-origin HTTP requests initiated from within scripts
 
 ## How to Run
 
-Since this project was created using create-react-app you can get all dependencies by follwing the 'Creating an App' [guidlines](https://github.com/facebook/create-react-app/blob/master/README.md#creating-an-app).  
+Since this project was created using create-react-app you can get all dependencies by following the 'Creating an App' [guidlines](https://github.com/facebook/create-react-app/blob/master/README.md#creating-an-app).  
 
 You can then delete all the files and folders in your directory except the node_modules folder and the files within it.
 
