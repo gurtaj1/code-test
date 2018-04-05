@@ -19,10 +19,10 @@ Since browsers restrict cross-origin HTTP requests initiated from within scripts
 
 ## Getting Started
 
-$ git clone https://github.com/gurtaj1/code-test.git
-$ cd code-test
-$ npm install
-$ npm start
+- $ git clone https://github.com/gurtaj1/code-test.git
+- $ cd code-test
+- $ npm install
+- $ npm start
 
 ## Further Notes  
 
