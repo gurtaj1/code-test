@@ -4,11 +4,10 @@ import {connect} from 'react-redux';
 import AllSets from '../components/AllSets'
 
 class AllSetsCon extends React.Component {
-    createAllSets () {
+    createAllSets () {  //pass props to child component
         return (
             <AllSets 
                 data={this.props.data}
-                getData={() => this.props.getData()}
             />
         )
     }

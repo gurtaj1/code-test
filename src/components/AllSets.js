@@ -4,7 +4,7 @@ import SetsListItem from './SetsListItem';
 
 class AllSets extends React.Component {
     createSetsList () {
-        if(!this.props.data.error){
+        if(!this.props.data.error){   //if api calls were made successfully
             return this.props.data.sets.map(set => {
                 return (
                     <SetsListItem
@@ -12,11 +12,11 @@ class AllSets extends React.Component {
                         title={set.title}
                         quote={set.quoter}
                         image={set.image}
-                        link={"/"+set.uid}
+                        link={"/"+set.uid} //create url to pass down to the link in SetsListItem
                     />
                 )
             })
-        } else {
+        } else { //if there was an error in making the api calls
             return (
                 <div>
                     Oops! Looks like there was an error in retrieving the requested information. Please refresh the page to try again.

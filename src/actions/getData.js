@@ -37,7 +37,7 @@ export default function getData(){
                 if (object.items.length>0) {
                     object.items.forEach(item => {
                         if (item.content_type === "episode") {
-                            axios.get(baseURL+item.content_url)  //get each episode-item for each set which has items in it
+                            axios.get(baseURL+item.content_url)  //get each episode-data for each set which has items in it
                             .then(res => {
                                 dispatch({
                                     type: "GET_EPISODE",

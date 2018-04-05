@@ -4,13 +4,13 @@ import EpisodesListItem from './EpisodesListItem';
 
 class Set extends React.Component {
     createEpisodesList () {
-        if (this.props.episodes.length>0) {
+        if (this.props.episodes.length>0) { //if there are episodes for this set
             return this.props.episodes.map(episode => {
                 return (
                     <EpisodesListItem
                         key={episode.uid}
                         title={episode.title}
-                        link={"/" + this.props.setuid + "/" + episode.uid}
+                        link={"/" + this.props.setuid + "/" + episode.uid} //create url to be passed down to link in EpisodesListItem
                     />
                 )
             })

@@ -6,7 +6,7 @@ import {bindActionCreators} from 'redux';
 import getData from '../actions/getData';
 
 class NavBarCon extends React.Component {
-    componentWillMount() {
+    componentWillMount() {  //dispatch action for api calls before component is rendered
         this.props.getData();
     }
     render() {

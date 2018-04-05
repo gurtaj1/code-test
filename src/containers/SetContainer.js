@@ -6,7 +6,7 @@ import Set from '../components/Set'
 class SetCon extends React.Component {
     createSet () {
         if (!this.props.data.error) {
-            let activeSet = this.props.data.sets.filter(
+            let activeSet = this.props.data.sets.filter( //get the set which corresponds to the current url
                 set => set.uid === this.props.match.params.setuid
             )
             return activeSet.map(set => {

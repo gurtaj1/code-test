@@ -5,8 +5,8 @@ const initialState = {
                         sets: []
                     };
 
-function addSets(state=initialState, sets) {
-    let newStateSets = state.sets.slice(0);
+function addSets(state=initialState, sets) {  //add data from api call to state
+    let newStateSets = state.sets.slice(0);   //make copy of state without mutating it
     newStateSets = sets;
     for (let i=0; i<newStateSets.length; i++) {
         newStateSets[i].episodes = [];

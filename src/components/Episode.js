@@ -1,11 +1,6 @@
 import React from 'react';
 
 class Episode extends React.Component {
-    getUKDate() {
-        let usaDate = this.props.date.slice(0, 10);
-        let usaDateArr = usaDate.split("-");
-        return usaDateArr[2] + "/" + usaDateArr[1] + "/" + usaDateArr[0];
-    }
     render () {
         return (
             <div className="container-fluid text-center">
