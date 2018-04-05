@@ -1,3 +1,5 @@
+import noImage from '../images/no_image.jpg';
+
 const initialState = {
                         error: null,
                         sets: []
@@ -8,7 +10,7 @@ function addSets(state=initialState, sets) {
     newStateSets = sets;
     for (let i=0; i<newStateSets.length; i++) {
         newStateSets[i].episodes = [];
-        newStateSets[i].image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
+        newStateSets[i].image = noImage;
     }
     return {
         ...state,
@@ -59,7 +61,7 @@ function addEpisodeImage(state=initialState, episodeImage) {
                 if(newStateSets[i].episodes[j].image_urls[0] === episodeImage.self) {
                     newStateSets[i].episodes[j].image = episodeImage.url;
                 } else {
-                    newStateSets[i].episodes[j].image = "https://canadatwoway.com/wp-content/uploads/2017/11/No_Image_Available.jpg";
+                    newStateSets[i].episodes[j].image = noImage;
                 }
             }
         }
