@@ -5,14 +5,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Important Notes](#important-notes)
 - [Sending Feedback](#sending-feedback)
 - [How to Run](#how-to-run)
+- [Further Notes](#further-notes)
+  - [Extra Work](#extra-work)
+  - [Available API Data](#navailable-api-data)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
-- [Further Notes](#further-notes)
-  - [Extra Work](#extra-work)
-  - [Available API Data](#navailable-api-data)  
+  - [npm run eject](#npm-run-eject)  
 
 ## Important Notes
 
