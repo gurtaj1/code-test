@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Getting Started](#getting-started)
 - [Further Notes](#further-notes)
   - [Extra Work](#extra-work)
-  - [Available API Data](#navailable-api-data)
+  - [Available API Data](#available-api-data)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
