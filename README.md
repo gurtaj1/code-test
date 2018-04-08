@@ -28,9 +28,7 @@ Since browsers restrict cross-origin HTTP requests initiated from within scripts
 
 ### Extra Work  
 
-If I had allowed myself more time on this project, I would have looked into a way in which I could dispatch one action, upon the response of my last api call. Since this is my first time chaining promises in Reactjs, I am not yet fully aware of what I can and cannot do.
-
-I have also not, as of yet, had any experience in writing tests. If I had I would have certainly applied unit testing to my project as I understand the importance of test driven development.  
+I have not, as of yet, had any experience in writing tests. If I had I would have certainly applied unit testing to my project as I understand the importance of test driven development.  
 All of my debugging was done by observing any errors found in the browser console whenever attempting to run the code. This was always followed by examination of the relevant pieces of code.
 Some packages that I believe would have helped me with my testing and debugging are Jest and ESLint.
 
